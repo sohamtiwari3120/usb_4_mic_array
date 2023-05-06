@@ -13,3 +13,6 @@ def get_respeaker_index():
                     return i
     print(f"Respeaker device not found, returning index = -1")
     return -1
+
+if __name__ == "__main__":
+    print(get_respeaker_index())

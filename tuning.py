@@ -118,8 +118,15 @@ class Tuning:
     def set_vad_threshold(self, db):
         self.write('GAMMAVAD_SR', db)
 
+    @property
     def is_voice(self):
+        # behaves more like is sound, from observations
         return self.read('VOICEACTIVITY')
+
+    @property
+    def is_speech(self):
+        # behaves more like is sound, from observations
+        return self.read('SPEECHDETECTED')
 
     @property
     def direction(self):
